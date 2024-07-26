@@ -4,7 +4,9 @@
 FROM ansible_base:latest
 
 # copy script from local disk to file system inside Docker image
-COPY run.sh /var/
+COPY run.sh /var/run.sh
 
 # adjust file permissions to make run.sh executable
 RUN chmod 755 /var/run.sh
+
+CMD ["bash"]

@@ -149,3 +149,35 @@ Check that [ansible/hosts/run.sh](./ansible/host/run.sh) has proper end of line 
 ## Other issue
 
 Please open an [issue](https://github.com/LMtx/ansible-lab-docker/issues/new) and I'll try to help.
+
+# additional command
+
+docker-compose up -d --build
+
+docker exec -it master01 bash
+
+find run.sh -type f -print0 | xargs -0 dos2unix --
+
+ping -c 2 host01
+
+ssh-agent bash
+
+ssh-add master_key
+
+ansible-playbook -i inventory ping_all.yml
+
+ansible-playbook -i inventory install_php.yml
+
+docker cp master01:/var/ans/ .
+
+docker cp master/ansible/. master01:/var/ans
+
+docker cp --help
+
+docker-compose kill
+
+docker-compose rm
+
+docker volume rm ansible_ansible_vol
+
+docker rmi ansible_host ansible_master ansible_base
